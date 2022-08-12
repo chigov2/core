@@ -16,7 +16,7 @@ public class AccountEntity {
     @Column(nullable = false)
     private UUID uuid;
 
-    @Column(nullable = false,length = 50)
+    @Column(nullable = true,length = 50)
     private String middleName;
 
     @Column(nullable = false,length = 50)
@@ -33,6 +33,14 @@ public class AccountEntity {
 
     @Column(nullable = false,length = 50)
     private String company;
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
 
     public BigInteger getId() {
         return id;
